@@ -1,0 +1,34 @@
+.back-1 {
+    padding: 50px;
+    background-color: #5b4573;
+    margin-top: -42px;
+}
+
+.mybor {
+    background-image: url('../../assets/Bussiness_man.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.cont {
+    margin: 5% 7vw;
+
+}
+
+.col-1 {
+    padding: 18px 10px;
+    border-radius: 25px;
+    background-color: #5b4573a1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cont-main {
+    background-image: url('../../assets/search-back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}

@@ -1,0 +1,317 @@
+<div class="container-fluid back-1"></div>
+
+
+<br>
+
+
+<div class="col-sm-12 mybor" style="padding-left: 0px; padding-right: 0px">
+	<form class="container booking-item-dates-change mgb70" action="search" method="GET">
+					<div class="row mobile_view"><div class="col-sm-12 align-center"><label style="font-weight:bold; font-size:20px;">Search</label><span id="search_bar_slide" onclick="move_div(this.id);" class="up_down_div" style="color:#fff;">+</span></div></div>
+	
+				<div class="row  " id="search_bar_slide_div">
+			<div class="col-md-4 col-xs-12">
+				<div class="form-group form-group-icon-left">
+					<label class="lbl_noMob">Venue Name, City</label>
+					<input type='text' id="search_txt" name='text' autocomplete="off" placeholder="Hall title, City or Address here" class='form-control' value="">
+					<div id="suggestbox"></div>
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-6">
+				<div class="input-daterange">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group form-group-icon-left">
+								<label class="lbl_noMob">Booking Date</label>
+								<input id="datepicker" class="form-control" value="16-05-2021" name="start" type="text">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-6"> 
+				<div class="form-group form-group-icon-left"> 
+					<label class="lbl_noMob">Timings</label>
+					<select class="form-control" id="searchTimings" name="timings">
+						<option>Dinner</option>
+						<option>Lunch</option>
+						<option selected="">Dinner / Lunch</option>
+					</select>
+				</div>
+			</div>
+
+        <div class="col-md-2 col-xs-12 mg_top">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group form-group-select-plus">
+						
+							<!--input  value="Search" type="submit" class="btn btn-warning" style="margin-top: 18px;  padding-left: 30%; padding-right: 30%;"-->
+							<button value="Search" class="MainSearch btn btn-warning btn_mobile_full" style="margin-top: 32px;  padding-left: 30%; padding-right: 30%;">Search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<br>
+<br>
+<br>
+
+<!-- --------------------------------------------------Side bar------------------------------------------------------ -->
+
+<div class="cont-main">
+    <div class="cont row">
+        <div class="col-1 col-lg-3" >
+    
+    
+            <div class="container" id="myNavbar">
+                <ul class="nav navbar-nav" style="min-width:250px;">
+                    <aside class="booking-filters">
+                        <h3>Filter By:</h3>
+                        <form action='#' method="GET">
+                        <input type='hidden' name='city' value='Islamabad'>							<ul class="list booking-filters-list">
+                            
+                            <!--li>
+                                <h5 class="booking-filters-title">Search </h5>
+                                <input type="text" name="Search" placeholder="Enter name, city or address" style="width: 100%;">
+                                </li-->
+                            <li>
+                                <h5 class="booking-filters-title">Price Per Head</h5>
+                                <input type="text" name="price-range" id="price-slider">
+                            </li>
+                            <li>
+                                <h5 class="booking-filters-title">City</h5>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="cities" checked="checked" value="1" type="radio" onclick="FilterSearch();"> Islamabad
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="cities" value="2" type="radio" onclick="FilterSearch();"> Rawalpindi
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="cities" value="4" type="radio" onclick="FilterSearch();"> Lahore
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="cities" value="3" type="radio" onclick="FilterSearch();"> Chakwal
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <h5 class="booking-filters-title">Food Type</h5>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="food_type" value="2" type="radio" checked="checked" onclick="FilterSearch();"> Both
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="food_type" value="0" onclick="FilterSearch();"> Internal
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="food_type" value="1" onclick="FilterSearch();"> External
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <h5 class="booking-filters-title">Booking Type</h5>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="booking_type" value="2" type="radio" checked="checked" onclick="FilterSearch();"> All
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="booking_type" value="0" onclick="FilterSearch();"> Manual
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="booking_type" value="1" onclick="FilterSearch();"> Automated
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <h5 class="booking-filters-title">Capacity</h5>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="capacity" value="0" type="radio" checked="checked" onclick="FilterSearch();"> Any
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="capacity" value="0-100" onclick="FilterSearch();"> 0-100
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="capacity" value="101-500" onclick="FilterSearch();"> 101-500
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="capacity" value="501-1000" onclick="FilterSearch();"> 501-1000
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="capacity" value="1000+" onclick="FilterSearch();"> 1000+
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="radio" name="capacity" id="CapacityCustomRadio" value="custom"> Custom
+                                    </label>
+                                    <div id="CapacityCustom" style="display:none">
+                                        <input type="text" name="custom_capacity" class="form-control" id="CapacityCustomVal" onblur="FilterSearch();">
+                                    </div>
+                                </div>
+                                <script>
+                                $("input[type='radio'][name='capacity']").change(function(){
+                                    if($("#CapacityCustomRadio").is(':checked')){
+                                        $("#CapacityCustom").show();
+                                    }else{
+                                        $("#CapacityCustom").hide();
+                                    }
+                                });
+                                </script>
+                            </li>
+                            <li><h5 class='booking-filters-title'>Premium Facilities</h5><div class='checkbox'><label><input class='' name='service[]' value='76' type='checkbox' onclick='FilterSearch();'>Limousine</label></div><div class='checkbox'><label><input class='' name='service[]' value='78' type='checkbox' onclick='FilterSearch();'>Additional Waiters</label></div><div class='checkbox'><label><input class='' name='service[]' value='77' type='checkbox' onclick='FilterSearch();'>Waitresses</label></div><li><h5 class='booking-filters-title'>Other Facilities</h5><div class='checkbox'><label><input class='' name='service[]' value='61' type='checkbox' onclick='FilterSearch();'>Parking</label></div><div class='checkbox'><label><input class='' name='service[]' value='62' type='checkbox' onclick='FilterSearch();'>Bridal Room</label></div><div class='checkbox'><label><input class='' name='service[]' value='63' type='checkbox' onclick='FilterSearch();'>Prayers Area</label></div><div class='checkbox'><label><input class='' name='service[]' value='70' type='checkbox' onclick='FilterSearch();'>Segregation / Seperation</label></div><div class='checkbox'><label><input class='' name='service[]' value='65' type='checkbox' onclick='FilterSearch();'>Backup power</label></div><div class='checkbox'><label><input class='' name='service[]' value='81' type='checkbox' onclick='FilterSearch();'>Music System</label></div>								<li>
+                                <h5 class="booking-filters-title">Venue type</h5>
+                                <div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Fixed Marquee' onclick='FilterSearch();'>Fixed Marquee</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Resort' onclick='FilterSearch();'>Resort</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Club' onclick='FilterSearch();'>Club</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Banquet Hall' onclick='FilterSearch();'>Banquet Hall</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Hotel Hall' onclick='FilterSearch();'>Hotel Hall</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Farm House' onclick='FilterSearch();'>Farm House</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Wedding Lawn' onclick='FilterSearch();'>Wedding Lawn</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Movable Marquee' onclick='FilterSearch();'>Movable Marquee</label></div><div class='checkbox'><label><input type='checkbox' class='' name='type[]' value='Community Hall' onclick='FilterSearch();'>Community Hall</label></div>								</li>
+                            <li>
+                                <h5 class="booking-filters-title">Services</h5>
+                                <div class='checkbox'><label><input type='checkbox' class='' name='purpose[]' value='2' onclick='FilterSearch();'>Weddings</label></div><div class='checkbox'><label><input type='checkbox' class='' name='purpose[]' value='4' onclick='FilterSearch();'>Social Gatherings</label></div><div class='checkbox'><label><input type='checkbox' class='' name='purpose[]' value='7' onclick='FilterSearch();'>Public Talks</label></div><div class='checkbox'><label><input type='checkbox' class='' name='purpose[]' value='3' onclick='FilterSearch();'>Corporate Events</label></div><div class='checkbox'><label><input type='checkbox' class='' name='purpose[]' value='1' onclick='FilterSearch();' checked="">Birthdays</label></div><div class='checkbox'><label><input type='checkbox' class='' name='purpose[]' value='6' onclick='FilterSearch();'>Concerts</label></div>								</li>
+                            <li>
+                                <h5 class="booking-filters-title">Floor</h5>
+                                <div class="checkbox"><label><input class="" name="floor[]" value="1" type="checkbox" onclick="FilterSearch();">Ground Floor</label></div><div class="checkbox"><label><input class="" name="floor[]" value="2" type="checkbox" onclick="FilterSearch();">First Floor</label></div><div class="checkbox"><label><input class="" name="floor[]" value="3" type="checkbox" onclick="FilterSearch();">Second Floor</label></div><div class="checkbox"><label><input class="" name="floor[]" value="4" type="checkbox" onclick="FilterSearch();">Third Floor</label></div><div class="checkbox"><label><input class="" name="floor[]" value="5" type="checkbox" onclick="FilterSearch();">Basement</label></div>								</li>
+                            <li>
+                                <h5 class="booking-filters-title">Ratings</h5>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="any" type="radio" checked="checked" onclick='FilterSearch();'> All
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="5" type="radio" onclick='FilterSearch();'> 5 Star
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="4" type="radio" onclick='FilterSearch();'> 4 Star
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="3" type="radio" onclick='FilterSearch();'> 3 Star
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="2" type="radio" onclick='FilterSearch();'> 2 Star
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="1" type="radio" onclick='FilterSearch();'> 1 Star
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="ratings" value="0" type="radio" onclick='FilterSearch();'> Not Rated
+                                    </label>
+                                </div>
+                            </li>
+                            </ul></form>
+                            <li class="filterBy-search-btn" style="display:none;">
+                                <div class="form-group" style='margin-bottom:30px'>
+                                    <div class="col-sm-6">
+                                        <!--input type="submit" style='width:100%!important;  margin-top:2px;' name="submit" class='btn btn-info btn-sm pull-left' value='Search'-->
+                                        <button style='width:100%!important;  margin-top:2px;' class='FilterBtn btn btn-info btn-sm pull-left'>Search</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="reset" style='width:100%!important; margin-top:2px;' name="" class='btn btn-sm btn-info pull-right' value='Reset'>
+                                    </div>
+                                </div>
+                            </li>
+                        </aside></ul>
+                    
+                    <br><br>
+                
+            </div>
+        </div>
+        <div class="col-lg-9" style="padding: 10px;">
+            <ul>
+
+                <h3 class="text-center p-6">Search Results</h3>
+                <br>
+                <br>
+                <li style="margin-bottom: 15px;">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-5">
+                                <img class="card-img" src="../../assets/thumbnail-girl.jpg" alt="Suresh Dasari Card">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Property Name</h5>
+                                    <p class="card-text">Property Description goes here. Property Description goes here. Property Description goes here.</p>
+                                    <a href="#" class="btn btn-primary">View Property</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-5">
+                                <img class="card-img" src="../../assets/thumbnail-girl.jpg" alt="Suresh Dasari Card">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Property Name</h5>
+                                    <p class="card-text">Property Description goes here. Property Description goes here. Property Description goes here.</p>
+                                    <a href="#" class="btn btn-primary">View Property</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-5">
+                                <img class="card-img" src="../../assets/thumbnail-girl.jpg" alt="Suresh Dasari Card">
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card-body">
+                                    <h5 class="card-title">Property Name</h5>
+                                    <p class="card-text">Property Description goes here. Property Description goes here. Property Description goes here.</p>
+                                    <a href="#" class="btn btn-primary">View Property</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    
+    
+    </div>
+</div>
+
+
+
+<br>
+<br>
+

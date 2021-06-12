@@ -1,0 +1,211 @@
+<div class="container-fluid cont-1">
+
+    <div class="container">
+        <div class="row">
+            <div class="column-lg-6">
+
+            </div>
+
+            <div class="column-lg-6 width">
+                <div class="p-4 visibility-hidden" data-toggle="appear" data-timeout="150" data-class="">
+                    <ul class="nav nav-tabs">
+                    <li class="active"  style="width: 50%; text-align: center;"><a data-toggle="tab" href="#home" class="btn btn-default">Partners Login</a></li>
+                    <li  style="width: 50%; text-align: center;"><a data-toggle="tab" href="#menu1" class="btn btn-default">Register with EVENTIER</a></li>
+                    
+                    </ul>
+                    
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane active">
+                        
+                        <!-- Login Block -->
+                                    <div class="block block-partner">
+                                        <div class="block-content block-content-full block-content-narrow">
+                                            <!-- Login Title -->
+                                            <br>
+                                            
+                    
+                                            <!-- Login Form -->
+                    
+                                            <form class="js-validation-login form-horizontal push-10-t push-10" id="login_form" action="https://partner.eventier.com/index.php/Users/login" method="post">
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-primary floating">
+                                                            <label for="login-username">Username</label>
+                                                            <input class="form-control" type="text" id="login-username" name="email">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-primary floating">
+                                                            <label for="login-password">Password</label>
+                                                            <input class="form-control" type="password" id="login-password" name="password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <label class="css-input switch switch-sm switch-primary">
+                                                            <input type="checkbox" id="login-remember-me" name="login-remember-me"><span></span> Remember Me?
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12 col-sm-6 col-md-4">
+                                                        <input class="btn btn-block btn-primary" type="submit" name="loginSubmit" id="submit" value="Login" />
+                                                        
+                                                    </div>
+                                                    <a href="https://partner.eventier.com/Users/forgetPassword" id="#forgetpassword" style="text-align: center; float: right; padding-top: 7px;">Forget Password?</a>
+                                                </div>
+                                            </form>
+                                            <!-- END Login Form -->
+                                        </div>
+                                    </div>
+                                    <!-- END Login Block -->
+                    
+                    </div>
+                    
+                    
+                    
+                    <div id="menu1" class="tab-pane ">
+                    
+                                    <div class="block block-themed">
+                                       
+                                        <div class="block-content block-content-full block-content-narrow">
+                                            <br>
+                                            <form class="js-validation-register form-horizontal push-50-t push-50"  action="https://partner.eventier.com/Users/registration" method="post">
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-success">
+                                                            <label for="register-username">First Name</label>
+                                                            <input type="text" class="form-control" name="first_name" placeholder="First Name" required="" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-success">
+                                                            <label for="register-username">Last Name</label>
+                                                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required="" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-success">
+                                                            <label for="reference">Referral (Optional)</label>
+                                                            <input type="text" class="form-control" name="reference" placeholder="Reference" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-success">
+                                                            <label for="register-email">Email</label>
+                                                            <input type="email" class="form-control" name="email" placeholder="Email" required="" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-success">
+                                                            <label for="register-password">Password</label>
+                                                            <input type="password" class="form-control" name="password" placeholder="Password" required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-material form-material-success">
+                                                            <label for="register-password2">Confirm Password</label>
+                                                            <input type="password" class="form-control" name="conf_password" placeholder="Confirm password" required="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <label class="css-input switch switch-sm switch-success">
+                                                            <input type="checkbox" id="register-terms" name="register-terms"><span></span> I agree with terms &amp; conditions
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12 col-sm-6 col-md-5">
+                                                        <input class="btn btn-block btn-success"  name="regisSubmit" type="submit" value="Sign Up"/>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <!-- END Register Form -->
+                                        </div>
+                                    </div>
+                                    <!-- END Register Block -->
+                    
+                    
+                    </div>
+                    
+                    </div>
+                                            
+                                            
+                         
+                                            
+                                            
+                     <!------------------------------------ End Login signup Tabs  --------------------------------------------------->
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+                     
+                     
+                     
+                    
+
+
+                

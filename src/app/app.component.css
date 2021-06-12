@@ -1,0 +1,51 @@
+.nav {
+    text-decoration: none;
+    background-color: #faebd700;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    height: 42px;
+    border: transparent;
+}
+a {
+    color: white;
+}
+.nav-link{
+    border: 1px solid #fffcfc;
+}
+.nav-link:hover{
+    background-color: #deda502e;
+}
+.nav-item {
+    z-index: 1;
+    position: absolute;
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+.right {
+    float: right;
+}
+.logo {
+    top: 60%;
+    left: 8%;
+}
+.nav-logo {
+    border: none;
+}
+.nav-logo:hover {
+    background-color: none;
+}
+.add-porperty {
+    top: 50%;
+    right: 27%;
+
+}
+.sign-up {
+    top: 50%;
+    right: 20%;
+}
+.login {
+    top: 50%;
+    right: 7%;
+}
